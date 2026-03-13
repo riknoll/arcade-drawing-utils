@@ -7,6 +7,7 @@ namespace drawing {
     //% to.shadow=drawing_utils_colorArray
     //% weight=100
     //% group="Transformations"
+    //% inlineInputMode=inline
     export function remapColorsInRect(image: Image, topLeft: util.Point | tiles.Location | Sprite, width: number, height: number, from: number[], to: number[]) {
         if (from.length !== to.length) {
             throw "color arrays passed to remap colors must have the same length"
@@ -34,6 +35,7 @@ namespace drawing {
     //% to.shadow=drawing_utils_colorArray
     //% weight=90
     //% group="Transformations"
+    //% inlineInputMode=inline
     export function remapColors(image: Image, from: number[], to: number[]) {
         remapColorsInRect(image, new util.Point(0, 0), image.width, image.height, from, to);
     }
@@ -47,6 +49,7 @@ namespace drawing {
     //% position.shadow=drawing_utils_createPoint
     //% weight=80
     //% group="Transformations"
+    //% inlineInputMode=inline
     export function drawRemappedImage(dest: Image, source: Image, position: util.Point | tiles.Location | Sprite, from: number[], to: number[]) {
         const mapped = source.clone();
         remapColors(mapped, from, to);
@@ -59,6 +62,7 @@ namespace drawing {
     //% image.defl="myImage"
     //% weight=70
     //% group="Transformations"
+    //% inlineInputMode=inline
     export function rotatedImage(image: Image, rotations: number) {
         rotations = (((rotations | 0) % 4) + 4) % 4;
 
@@ -82,6 +86,7 @@ namespace drawing {
     //% image.defl="myImage"
     //% weight=60
     //% group="Transformations"
+    //% inlineInputMode=inline
     export function scrollImage(image: Image, x: number, y: number) {
         image.scroll(x, y);
     }
@@ -106,6 +111,7 @@ namespace drawing {
     //% color16.shadow=colorindexpicker
     //% weight=20
     //% group="Transformations"
+    //% inlineInputMode=inline
     export function colorArray(
         color1: number,
         color2?: number,

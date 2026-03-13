@@ -23,6 +23,7 @@ namespace drawing {
 
     //% blockId=drawing_utils_renderAtZIndex
     //% block="render at z $z with $screen"
+    //% draggableParameters="reporter"
     //% weight=110
     //% group=Renderable
     export function renderAtZIndex(z: number, renderFn: (screen: Image) => void) {
@@ -41,6 +42,7 @@ namespace drawing {
     //% blockId=drawing_utils_setRenderableFunction
     //% block="set render function of $renderable with $screen"
     //% renderable.shadow=drawing_utils_createRenderable
+    //% draggableParameters="reporter"
     //% handlerStatement
     //% weight=90
     export function setRenderableFunction(renderable: Renderable, renderFn: (screen: Image) => void) {

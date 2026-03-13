@@ -7,7 +7,8 @@ namespace drawing {
     }
 
     //% blockId=drawing_utils_renderOnSprite
-    //% block="render $renderOrder $sprite ignoring invisible flag $ignoreInvisibleFlag with $sprite"
+    //% block="render $renderOrder $target ignoring invisible flag $ignoreInvisibleFlag with $sprite"
+    //% renderOrder.shadow=drawing_utils__renderOrder
     //% sprite.shadow=variables_get
     //% sprite.defl=mySprite
     //% handlerStatement
@@ -15,12 +16,12 @@ namespace drawing {
     //% group=Sprites
     //% weight=100
     export function renderOnSprite(
-        sprite: Sprite,
+        target: Sprite,
         renderOrder: number,
         ignoreInvisibleFlag: boolean,
         renderFn: (sprite: Sprite) => void
     ) {
-        const renderer = new SpriteRenderer(sprite, renderOrder, ignoreInvisibleFlag, renderFn);
+        const renderer = new SpriteRenderer(target, renderOrder, ignoreInvisibleFlag, renderFn);
         _state().spriteRenderers.push(renderer);
     }
 

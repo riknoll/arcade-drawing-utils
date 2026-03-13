@@ -171,6 +171,7 @@ namespace drawing {
     //% block="$target draw image $image at $location"
     //% location.shadow=drawing_utils_createPoint
     //% target.shadow=imagescreen
+    //% image.shadow=screen_image_picker
     //% weight=15
     //% group="Drawing"
     export function drawImage(target: Image, image: Image, location: util.Point | tiles.Location | Sprite) {
