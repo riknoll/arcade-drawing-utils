@@ -24,6 +24,16 @@ namespace drawing {
         _state().spriteRenderers.push(renderer);
     }
 
+    //% blockId=drawing_utils_removeRenderables
+    //% block="remove renderables on $sprite"
+    //% sprite.shadow=variables_get
+    //% sprite.defl=mySprite
+    //% group=Sprites
+    //% weight=90
+    export function removeRenderables(sprite: Sprite) {
+        _state().removeRenderables(sprite);
+    }
+
     //% shim=TD_ID
     //% blockId=drawing_utils__renderOrder
     //% block="$order"

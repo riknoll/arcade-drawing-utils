@@ -1,7 +1,14 @@
 {
-    "name": "my-project",
+    "name": "arcade-drawing-utils",
     "version": "0.0.0",
     "files": [
+        "state.ts",
+        "draw.ts",
+        "renderable.ts",
+        "sprite.ts",
+        "tilemap.ts",
+        "transform.ts",
+        "points.ts",
         "main.ts"
     ],
     "supportedTargets": [
