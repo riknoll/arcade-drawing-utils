@@ -7,7 +7,7 @@ namespace drawing {
             super(z);
         }
 
-        __drawCore() {
+        __drawCore(camera: scene.Camera) {
             if (this.renderFn) {
                 this.renderFn(screen);
             }
