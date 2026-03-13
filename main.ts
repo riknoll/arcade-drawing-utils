@@ -1,1 +1,4 @@
-// add code here
+//% color=#43305e
+namespace drawing {
+
+}

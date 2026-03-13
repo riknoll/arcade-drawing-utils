@@ -7,10 +7,10 @@ namespace drawing {
     }
 
     //% blockId=drawing_utils_renderOnSprite
-    //% block="render $renderOrder $target ignoring invisible flag $ignoreInvisibleFlag with $sprite"
+    //% block="render $renderOrder $target with $sprite"
     //% renderOrder.shadow=drawing_utils__renderOrder
-    //% sprite.shadow=variables_get
-    //% sprite.defl=mySprite
+    //% target.shadow=variables_get
+    //% target.defl=mySprite
     //% handlerStatement
     //% draggableParameters="reporter"
     //% group=Sprites
@@ -18,11 +18,26 @@ namespace drawing {
     export function renderOnSprite(
         target: Sprite,
         renderOrder: number,
-        ignoreInvisibleFlag: boolean,
         renderFn: (sprite: Sprite) => void
     ) {
-        const renderer = new SpriteRenderer(target, renderOrder, ignoreInvisibleFlag, renderFn);
+        const renderer = new SpriteRenderer(target, renderOrder, false, renderFn);
         _state().spriteRenderers.push(renderer);
+    }
+
+    //% blockId=drawing_utils_setSpriteRendererIgnoreInvisibleFlag
+    //% block="set registered renderables on $sprite to ignore invisible flag $ignoreInvisibleFlag"
+    //% sprite.shadow=variables_get
+    //% sprite.defl=mySprite
+    //% group=Sprites
+    //% weight=95
+    export function setSpriteRendererIgnoreInvisibleFlag(
+        sprite: Sprite,
+        ignoreInvisibleFlag: boolean
+    ) {
+        const renderables = _state().spriteRenderers.filter(r => r.sprite === sprite);
+        for (const renderable of renderables) {
+            renderable.ignoreInvisibleFlag = ignoreInvisibleFlag;
+        }
     }
 
     //% blockId=drawing_utils_removeRenderables
