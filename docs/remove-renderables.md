@@ -3,7 +3,7 @@
 Removes any renderables registered on a sprite.
 
 ```sig
-drawing.removeRenderables(sprites.create(img`.`, SPriteKind.Player))
+drawing.removeRenderables(sprites.create(img`.`, SpriteKind.Player))
 ```
 
 ## Parameters
