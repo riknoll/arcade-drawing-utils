@@ -6,11 +6,21 @@ namespace drawing {
         Fill
     }
 
-
+    /**
+     * Draw a circle to an image.
+     *
+     *
+     * @param target The target image to draw on
+     * @param mode The draw mode (outline or fill)
+     * @param center The center point, sprite, or tile location of the circle
+     * @param radius The radius of the circle
+     * @param color The color of the circle
+     */
     //% blockId=drawing_utils_drawCircle
     //% block="$target $mode circle at $center with radius $radius color $color"
     //% center.shadow=drawing_utils_createPoint
     //% target.shadow=imagescreen
+    //% color.shadow=colorindexpicker
     //% weight=60
     //% group="Drawing"
     //% inlineInputMode=inline
@@ -23,10 +33,22 @@ namespace drawing {
         }
     }
 
+    /**
+     * Draw a rectangle to an image.
+     *
+     *
+     * @param target The target image to draw on
+     * @param mode The draw mode (outline or fill)
+     * @param topLeft The top-left point, sprite, or tile location of the rectangle
+     * @param width The width of the rectangle
+     * @param height The height of the rectangle
+     * @param color The color of the rectangle
+     */
     //% blockId=drawing_utils_drawRectangle
     //% block="$target $mode rectangle at $topLeft with width $width height $height color $color"
     //% topLeft.shadow=drawing_utils_createPoint
     //% target.shadow=imagescreen
+    //% color.shadow=colorindexpicker
     //% weight=50
     //% group="Drawing"
     //% inlineInputMode=inline
@@ -39,11 +61,21 @@ namespace drawing {
         }
     }
 
+    /**
+     * Draw a line to an image.
+     *
+     *
+     * @param target The image to draw on
+     * @param start The start point, sprite, or tile location of the line
+     * @param end The end point, sprite, or tile location of the line
+     * @param color The color of the line
+     */
     //% blockId=drawing_utils_drawLine
     //% block="$target draw line from $start to $end color $color"
     //% start.shadow=drawing_utils_createPoint
     //% end.shadow=drawing_utils_createPoint
     //% target.shadow=imagescreen
+    //% color.shadow=colorindexpicker
     //% weight=45
     //% group="Drawing"
     //% blockGap=8
@@ -52,6 +84,16 @@ namespace drawing {
         target.drawLine(start.x, start.y, end.x, end.y, color);
     }
 
+    /**
+     * Draw a line to an image with a specified thickness.
+     *
+     *
+     * @param target The image to draw on
+     * @param start The start point, sprite, or tile location of the line
+     * @param end The end point, sprite, or tile location of the line
+     * @param thickness The thickness of the line
+     * @param color The color of the line
+     */
     //% blockId=drawing_utils_drawThickLine
     //% block="$target draw thick line from $start to $end with thickness $thickness color $color"
     //% start.shadow=drawing_utils_createPoint
@@ -59,6 +101,7 @@ namespace drawing {
     //% thickness.min=0
     //% thickness.defl=2
     //% target.shadow=imagescreen
+    //% color.shadow=colorindexpicker
     //% weight=40
     //% group="Drawing"
     //% inlineInputMode=inline
@@ -80,12 +123,24 @@ namespace drawing {
         );
     }
 
+    /**
+     * Draws a triangle to an image.
+     *
+     *
+     * @param target The image to draw on
+     * @param mode The draw mode (outline or fill)
+     * @param p1 The first point, sprite, or tile location of the triangle
+     * @param p2 The second point, sprite, or tile location of the triangle
+     * @param p3 The third point, sprite, or tile location of the triangle
+     * @param color The color of the triangle
+     */
     //% blockId=drawing_utils_drawTriangle
     //% block="$target $mode triangle with points $p1 and $p2 and $p3 color $color"
     //% p1.shadow=drawing_utils_createPoint
     //% p2.shadow=drawing_utils_createPoint
     //% p3.shadow=drawing_utils_createPoint
     //% target.shadow=imagescreen
+    //% color.shadow=colorindexpicker
     //% weight=30
     //% group="Drawing"
     //% blockGap=8
@@ -101,6 +156,18 @@ namespace drawing {
         }
     }
 
+    /**
+     * Draws a quadrilateral to an image.
+     *
+     *
+     * @param target The image to draw on
+     * @param mode The draw mode (outline or fill)
+     * @param p1 The first point, sprite, or tile location of the quadrilateral
+     * @param p2 The second point, sprite, or tile location of the quadrilateral
+     * @param p3 The third point, sprite, or tile location of the quadrilateral
+     * @param p4 The fourth point, sprite, or tile location of the quadrilateral
+     * @param color The color of the quadrilateral
+     */
     //% blockId=drawing_utils_drawPolygon4
     //% block="$target $mode polygon with points $p1 and $p2 and $p3 and $p4 color $color"
     //% p1.shadow=drawing_utils_createPoint
@@ -108,6 +175,7 @@ namespace drawing {
     //% p3.shadow=drawing_utils_createPoint
     //% p4.shadow=drawing_utils_createPoint
     //% target.shadow=imagescreen
+    //% color.shadow=colorindexpicker
     //% weight=25
     //% group="Drawing"
     //% blockGap=8
@@ -124,11 +192,23 @@ namespace drawing {
         }
     }
 
+    /**
+     * Attempts to draw a shape to an image based on an array of points. If the mode is outline, it will draw a line between all of the given points.
+     * If the mode is fill, it will draw a rectangle if 2 points are given, a triangle if 3 points are given, and a quadrilateral if 4 points are given.
+     * More than 4 points is not supported for filled shapes.
+     *
+     *
+     * @param target The image to draw on
+     * @param mode The draw mode (outline or fill)
+     * @param points The array of points, sprites, or tile locations that define the shape
+     * @param color The color of the shape
+     */
     //% blockId=drawing_utils_drawFromPoints
     //% block="$target $mode from points $points color $color"
     //% points.shadow=lists_create_with
     //% points.defl=drawing_utils_createPoint
     //% target.shadow=imagescreen
+    //% color.shadow=colorindexpicker
     //% weight=20
     //% group="Drawing"
     //% blockGap=8
@@ -167,6 +247,14 @@ namespace drawing {
         }
     }
 
+    /**
+     * Draws an image onto another image.
+     *
+     *
+     * @param target The image to draw on
+     * @param image The image to draw
+     * @param location The point, sprite, or tile location to draw the image at
+     */
     //% blockId=drawing_utils_drawImage
     //% block="$target draw image $image at $location"
     //% location.shadow=drawing_utils_createPoint
@@ -178,6 +266,17 @@ namespace drawing {
         target.drawTransparentImage(image, location.left, location.top);
     }
 
+    /**
+     * Draws a portion of an image onto another image.
+     *
+     *
+     * @param target The image to draw on
+     * @param destPosition The position to draw the image at, specified as a Point, Location, or Sprite (the x and y of the location or sprite will be used)
+     * @param source The image to draw
+     * @param sourcePosition The position in the source image to start drawing from, specified as a Point, Location, or Sprite (the x and y of the location or sprite will be used)
+     * @param width The width of the area to draw from the source image
+     * @param height The height of the area to draw from the source image
+     */
     //% blockId=drawing_utils_drawPartialImage
     //% block="$target draw at $destPosition from $source at $sourcePosition w $width h $height"
     //% source.shadow=screen_image_picker

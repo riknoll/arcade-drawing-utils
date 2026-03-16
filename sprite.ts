@@ -6,6 +6,18 @@ namespace drawing {
         Below
     }
 
+    /**
+     * Registers code that runs either immediately before or immediately after a sprite is drawn.
+     * This is useful for adding effects to sprites, or drawing UI on top of them like status bars
+     * or text. By default, the registered code will not run if the sprite is invisible, but this can be changed
+     * with the "set registered renderables on sprite to ignore invisible flag" block. This function will be
+     * unregistered when the sprite is destoryed.
+     *
+     *
+     * @param target The sprite to register the render function on
+     * @param renderOrder Whether to render above or below the sprite
+     * @param renderFn The function that draws to the screen
+     */
     //% blockId=drawing_utils_renderOnSprite
     //% block="render $renderOrder $target with $sprite"
     //% renderOrder.shadow=drawing_utils__renderOrder
@@ -24,6 +36,16 @@ namespace drawing {
         _state().spriteRenderers.push(renderer);
     }
 
+    /**
+     * Sets whether registered renderables on a sprite should ignore the sprite's invisible flag. By default,
+     * registered renderables will not run if the sprite is invisible, but this block can be used to change
+     * that behavior. This only affects renderables already registered on the sprite, any renderables registered
+     * after this block is called will use the default behavior unless this block is called again.
+     *
+     *
+     * @param sprite The sprite to set the behavior on
+     * @param ignoreInvisibleFlag Whether to ignore the sprite's invisible flag
+     */
     //% blockId=drawing_utils_setSpriteRendererIgnoreInvisibleFlag
     //% block="set registered renderables on $sprite to ignore invisible flag $ignoreInvisibleFlag"
     //% sprite.shadow=variables_get
@@ -40,6 +62,12 @@ namespace drawing {
         }
     }
 
+    /**
+     * Removes any renderables registered on a sprite.
+     *
+     *
+     * @param sprite The sprite to remove registered renderables from
+     */
     //% blockId=drawing_utils_removeRenderables
     //% block="remove renderables on $sprite"
     //% sprite.shadow=variables_get
@@ -50,6 +78,9 @@ namespace drawing {
         _state().removeRenderables(sprite);
     }
 
+    /**
+     * A value used to indicate if a renderable should render above or below a sprite when using the "render on sprite" block.
+     */
     //% shim=TD_ID
     //% blockId=drawing_utils__renderOrder
     //% block="$order"

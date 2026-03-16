@@ -21,6 +21,14 @@ namespace drawing {
         }
     }
 
+    /**
+     * Runs the given code when the screen is being rendered at the specified z index. This is
+     * useful for drawing things like HUD elements or other custom UI.
+     *
+     *
+     * @param z The z to run this code at
+     * @param renderFn The function that draws to the screen
+     */
     //% blockId=drawing_utils_renderAtZIndex
     //% block="render at z $z with $screen"
     //% draggableParameters="reporter"
@@ -30,6 +38,14 @@ namespace drawing {
         scene.createRenderable(z, renderFn);
     }
 
+    /**
+     * Creates a renderable that will be drawn at the specified z index. By default, renderables don't
+     * anything until they have their render function set
+     *
+     *
+     * @param z The z to run this renderable's render function at
+     * @returns The created renderable
+     */
     //% blockId=drawing_utils_createRenderable
     //% block="create renderable at z $z"
     //% blockSetVariable=myRenderable
@@ -39,6 +55,13 @@ namespace drawing {
         return new Renderable(z);
     }
 
+    /**
+     * Sets the render function of a renderable. Calling this more than once will overwrite the previous render function.
+     *
+     *
+     * @param renderable The renderable to set the function of
+     * @param renderFn The function that draws to the screen
+     */
     //% blockId=drawing_utils_setRenderableFunction
     //% block="set render function of $renderable with $screen"
     //% renderable.shadow=drawing_utils_createRenderable
@@ -49,6 +72,12 @@ namespace drawing {
         renderable.renderFn = renderFn;
     }
 
+    /**
+     * Destroys a renderable. After calling this, the renderable will no longer draw to the screen.
+     *
+     *
+     * @param renderable The renderable to destroy
+     */
     //% blockId=drawing_utils_destroyRenderable
     //% block="destroy $renderable"
     //% renderable.shadow=variables_get
