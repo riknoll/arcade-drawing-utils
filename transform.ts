@@ -13,6 +13,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_remapColorsInRect
     //% block="$image remap colors from $from to $to in rect at $topLeft with width $width height $height"
+    //% help=github:arcade-drawing-utils/docs/remap-colors-in-rect
     //% topLeft.shadow=drawing_utils_createPoint
     //% image.shadow=imagescreen
     //% from.shadow=drawing_utils_colorArray
@@ -73,6 +74,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_drawRemappedImage
     //% block="$dest draw $source at $position with colors remapped from $from to $to"
+    //% help=github:arcade-drawing-utils/docs/draw-remapped-image
     //% source.shadow=screen_image_picker
     //% dest.shadow=imagescreen
     //% from.shadow=drawing_utils_colorArray
@@ -99,6 +101,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_rotatedImage
     //% block="$image rotated by $rotations clockwise rotations"
+    //% help=github:arcade-drawing-utils/docs/rotated-image
     //% image.shadow=variables_get
     //% image.defl="myImage"
     //% weight=70
@@ -131,6 +134,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_scrollImage
     //% block="$image scrolled by x $x y $y"
+    //% help=github:arcade-drawing-utils/docs/scroll-image
     //% image.shadow=variables_get
     //% image.defl="myImage"
     //% weight=60
@@ -145,6 +149,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_colorArray
     //% block="$color1||$color2|$color3|$color4|$color5|$color6|$color7|$color8|$color9|$color10|$color11|$color12|$color13|$color14|$color15|$color16"
+    //% help=github:arcade-drawing-utils/docs/color-array
     //% color1.shadow=colorindexpicker
     //% color2.shadow=colorindexpicker
     //% color3.shadow=colorindexpicker

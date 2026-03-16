@@ -9,6 +9,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_createPoint
     //% block="x $x y $y"
+    //% help=github:arcade-drawing-utils/docs/create-point
     //% weight=100
     //% group="Points"
     //% blockGap=8
@@ -26,6 +27,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_shiftedForCamera
     //% block="$point - camera"
+    //% help=github:arcade-drawing-utils/docs/shifted-by-camera
     //% point.shadow=drawing_utils_createPoint
     //% weight=95
     //% group="Points"
@@ -45,6 +47,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_projectPoint
     //% block="point from $source at angle $angle distance $distance"
+    //% help=github:arcade-drawing-utils/docs/project-point
     //% source.shadow=drawing_utils_createPoint
     //% weight=90
     //% group="Points"
@@ -65,6 +68,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_distance
     //% block="distance from $pointA to $pointB"
+    //% help=github:arcade-drawing-utils/docs/distance
     //% pointA.shadow=drawing_utils_createPoint
     //% pointB.shadow=drawing_utils_createPoint
     //% weight=80
@@ -86,6 +90,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_angleBetween
     //% block="angle from $pointA to $pointB"
+    //% help=github:arcade-drawing-utils/docs/angle-between
     //% pointA.shadow=drawing_utils_createPoint
     //% pointB.shadow=drawing_utils_createPoint
     //% weight=70

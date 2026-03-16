@@ -18,6 +18,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_drawCircle
     //% block="$target $mode circle at $center with radius $radius color $color"
+    //% help=github:arcade-drawing-utils/docs/draw-circle
     //% center.shadow=drawing_utils_createPoint
     //% target.shadow=imagescreen
     //% color.shadow=colorindexpicker
@@ -46,6 +47,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_drawRectangle
     //% block="$target $mode rectangle at $topLeft with width $width height $height color $color"
+    //% help=github:arcade-drawing-utils/docs/draw-rectangle
     //% topLeft.shadow=drawing_utils_createPoint
     //% target.shadow=imagescreen
     //% color.shadow=colorindexpicker
@@ -72,6 +74,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_drawLine
     //% block="$target draw line from $start to $end color $color"
+    //% help=github:arcade-drawing-utils/docs/draw-line
     //% start.shadow=drawing_utils_createPoint
     //% end.shadow=drawing_utils_createPoint
     //% target.shadow=imagescreen
@@ -96,6 +99,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_drawThickLine
     //% block="$target draw thick line from $start to $end with thickness $thickness color $color"
+    //% help=github:arcade-drawing-utils/docs/draw-thick-line
     //% start.shadow=drawing_utils_createPoint
     //% end.shadow=drawing_utils_createPoint
     //% thickness.min=0
@@ -136,6 +140,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_drawTriangle
     //% block="$target $mode triangle with points $p1 and $p2 and $p3 color $color"
+    //% help=github:arcade-drawing-utils/docs/draw-triangle
     //% p1.shadow=drawing_utils_createPoint
     //% p2.shadow=drawing_utils_createPoint
     //% p3.shadow=drawing_utils_createPoint
@@ -170,6 +175,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_drawPolygon4
     //% block="$target $mode polygon with points $p1 and $p2 and $p3 and $p4 color $color"
+    //% help=github:arcade-drawing-utils/docs/draw-polygon-4
     //% p1.shadow=drawing_utils_createPoint
     //% p2.shadow=drawing_utils_createPoint
     //% p3.shadow=drawing_utils_createPoint
@@ -205,6 +211,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_drawFromPoints
     //% block="$target $mode from points $points color $color"
+    //% help=github:arcade-drawing-utils/docs/draw-from-points
     //% points.shadow=lists_create_with
     //% points.defl=drawing_utils_createPoint
     //% target.shadow=imagescreen
@@ -257,6 +264,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_drawImage
     //% block="$target draw image $image at $location"
+    //% help=github:arcade-drawing-utils/docs/draw-image
     //% location.shadow=drawing_utils_createPoint
     //% target.shadow=imagescreen
     //% image.shadow=screen_image_picker
@@ -279,6 +287,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_drawPartialImage
     //% block="$target draw at $destPosition from $source at $sourcePosition w $width h $height"
+    //% help=github:arcade-drawing-utils/docs/draw-partial-image
     //% source.shadow=screen_image_picker
     //% target.shadow=imagescreen
     //% destPosition.shadow=drawing_utils_createPoint

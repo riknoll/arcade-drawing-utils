@@ -20,6 +20,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_renderOnSprite
     //% block="render $renderOrder $target with $sprite"
+    //% help=github:arcade-drawing-utils/docs/render-on-sprite
     //% renderOrder.shadow=drawing_utils__renderOrder
     //% target.shadow=variables_get
     //% target.defl=mySprite
@@ -48,6 +49,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_setSpriteRendererIgnoreInvisibleFlag
     //% block="set registered renderables on $sprite to ignore invisible flag $ignoreInvisibleFlag"
+    //% help=github:arcade-drawing-utils/docs/set-sprite-renderer-ignore-invisible-flag
     //% sprite.shadow=variables_get
     //% sprite.defl=mySprite
     //% group=Sprites
@@ -70,6 +72,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_removeRenderables
     //% block="remove renderables on $sprite"
+    //% help=github:arcade-drawing-utils/docs/remove-renderables
     //% sprite.shadow=variables_get
     //% sprite.defl=mySprite
     //% group=Sprites
@@ -84,6 +87,7 @@ namespace drawing {
     //% shim=TD_ID
     //% blockId=drawing_utils__renderOrder
     //% block="$order"
+    //% help=github:arcade-drawing-utils/docs/_render-order
     //% group=Sprites
     //% weight=0
     export function _renderOrder(

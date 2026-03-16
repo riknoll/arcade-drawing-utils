@@ -31,6 +31,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_renderAtZIndex
     //% block="render at z $z with $screen"
+    //% help=github:arcade-drawing-utils/docs/render-at-zindex
     //% draggableParameters="reporter"
     //% weight=110
     //% group=Renderable
@@ -48,6 +49,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_createRenderable
     //% block="create renderable at z $z"
+    //% help=github:arcade-drawing-utils/docs/create-renderable
     //% blockSetVariable=myRenderable
     //% weight=100
     //% group=Renderable
@@ -64,6 +66,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_setRenderableFunction
     //% block="set render function of $renderable with $screen"
+    //% help=github:arcade-drawing-utils/docs/set-renderable-function
     //% renderable.shadow=drawing_utils_createRenderable
     //% draggableParameters="reporter"
     //% handlerStatement
@@ -80,6 +83,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_destroyRenderable
     //% block="destroy $renderable"
+    //% help=github:arcade-drawing-utils/docs/destroy-renderable
     //% renderable.shadow=variables_get
     //% renderable.defl=myRenderable
     //% weight=80

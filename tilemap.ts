@@ -10,6 +10,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_drawTilemap
     //% block="$target draw tilemap $tilemap at $point"
+    //% help=github:arcade-drawing-utils/docs/draw-tilemap
     //% tilemap.shadow=variables_get
     //% tilemap.defl=myTilemap
     //% target.shadow=imagescreen
@@ -59,6 +60,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_drawAtCamera
     //% block="draw tilemap $tilemap at camera origin"
+    //% help=github:arcade-drawing-utils/docs/draw-at-camera-origin
     //% tilemap.shadow=variables_get
     //% tilemap.defl=myTilemap
     //% weight=90
@@ -77,6 +79,7 @@ namespace drawing {
      */
     //% blockId=drawing_utils_forEachVisibleLocation
     //% block="for each visible tile location with $col $row $location"
+    //% help=github:arcade-drawing-utils/docs/for-each-visible-location
     //% handlerStatement
     //% draggableParameters="reporter"
     //% weight=70

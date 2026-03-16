@@ -73,6 +73,6 @@ namespace drawing {
     }
 
     export function _state() {
-        return __util.getState(_stateFactory);
+        return new State();
     }
 }
