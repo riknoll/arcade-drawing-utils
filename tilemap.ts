@@ -92,8 +92,8 @@ namespace drawing {
 
         const tileWidth = 1 << tilemap.scale;
 
-        for (let x = camera.left; x < camera.left + screen.width; x += tileWidth) {
-            for (let y = camera.top; y < camera.top + screen.height; y += tileWidth) {
+        for (let x = camera.left; x < camera.left + screen.width + tileWidth; x += tileWidth) {
+            for (let y = camera.top; y < camera.top + screen.height + tileWidth; y += tileWidth) {
                 const location = tiles.getTileLocation(x >> tilemap.scale, y >> tilemap.scale);
                 callback(location.column, location.row, location);
             }
